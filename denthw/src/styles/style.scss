@@ -1,0 +1,21 @@
+@import "./common/reset";
+@import "./common/variable";
+@import "./utils/extend";
+@import "./utils/mixin";
+@import "./pages/home/banner";
+@import "./layout/header";
+@import "./layout/welcome";
+@import "./pages/home/service";
+@import "./pages/home/journey";
+@import "./pages/home/high_quality";
+@import "./pages/home/parallax";
+@import "./pages/home/rating";
+@import "./pages/home/diagnosis";
+@import "./pages/home/whatwedo";
+@import "./pages/home/doctors";
+@import "./pages/home/testimonial";
+@import "./pages/home/check";
+@import "./pages/home/map";
+@import "./pages/home/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

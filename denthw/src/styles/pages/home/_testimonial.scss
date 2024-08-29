@@ -1,0 +1,208 @@
+#testimonial {
+  box-sizing: border-box;
+  font-family: $default_font;
+  position: relative;
+  z-index: 100;
+  background-color: #FFFFFF;
+  padding: 80px 0;
+  .top_half{
+    @include Flexible(flex-start, center,column, wrap, 4px);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .tp{
+      @include Flexible(flex-start, center,row, wrap, 4px);
+      i{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #1E84B5;
+        margin-bottom: 10px;
+      }
+      h3{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5em;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #1E84B5;
+       
+        margin-bottom: 10px;
+      }
+    }
+    .cent{
+      @include Flexible(flex-start, flex-start,column, wrap, 0);
+      .topp{
+        @include Flexible(flex-start, center, row, wrap, 10px);
+        h1{
+          font-size: 44px;
+          font-weight: 700;
+          color: #1E84B5;
+          line-height: 1.2em;
+        }
+        h2{
+          font-size: 44px;
+          font-weight: 700;
+          line-height: 1.2em;
+        }
+      }
+    }
+    .bot{
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: #527282;
+      line-height: 1.8em;
+    }
+   
+  }
+
+  .img_part {
+    width: 570px;
+    height: 600px;
+    position: relative; 
+
+    .top_img {
+      position: relative; 
+      
+      img {
+        object-fit: cover;
+        border-radius: 40px;
+       
+    
+      }
+    }
+
+    .bottom_img {
+      position: absolute; 
+      left: 50px; 
+      top: 60%; 
+      width: 450px;
+      height: 190px;
+      background-color: #1E84B5;
+      z-index: 1; 
+      border-radius: 35px;
+      border: 6px solid white;
+      .inside{
+        @include Flexible(center, center, column, wrap, 10px);
+        .toppartt{
+          @include Flexible(flex-start, center, row, wrap, 15px);
+          margin-top: 30px;
+          border-bottom: 1px solid #FFFFFF1F;
+          h1{
+            font-size: 44px;
+            color: white;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-bottom: 10px;
+          }
+          p{
+            color: white;
+            margin: 0;
+            line-height: 1.8em;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+          }
+         }
+         .botpartt{
+          @include Flexible(flex-start, center, row, wrap, 10px);
+          margin-top: 10px;
+          .star_icons{
+            margin-right: 20px;
+            i{
+                color: #FFA800;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.6em;
+            }
+          }
+          h3{
+            margin-right: 0;
+            color: white;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6em;
+          }
+         }
+      }
+    
+    }
+
+
+  }
+ 
+  
+  .other_part{
+    @include Flexible(center, flex-start, column, wrap, 10px);
+    margin: 90px 0;
+    img{
+      margin-bottom: 30px;
+    }
+    p{
+      width: 728px;
+      margin-right: 30px;
+      font-size: 18px;
+      line-height: 1.8em;
+      font-weight: 500;
+      color:  #0E384C;
+      
+
+    }
+    .cent_img{
+      @include Flexible(flex-start, flex-start, row, wrap, 17px);
+      margin-top: 25px;
+      img{
+        border-radius: 100%;
+      }
+      h1{
+        font-size: 20px;
+        font-weight: 500;
+        color:  #0E384C;
+        margin-bottom: 16px;
+      }
+      h2{
+        font-size: 17px;
+        color: #527282;
+      }
+    }
+    .icns{
+      @include Flexible(flex-start, flex-start, row, wrap, 17px);
+      .first_icn{
+        @include Flexible(center, center,row, wrap, 5px);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #1E84B5;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        i{
+          color: white;
+        }
+        &:hover{
+          background-color: #0E384C;
+        }
+      }
+      .sec_icn{
+        @include Flexible(center, center,row, wrap, 5px);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #1E84B5;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        i{
+          color: white;
+        }
+        &:hover{
+          background-color: #0E384C;
+        }
+      }
+    }
+  }
+  
+}

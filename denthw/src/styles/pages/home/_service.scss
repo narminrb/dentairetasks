@@ -1,0 +1,133 @@
+#service{
+  box-sizing: border-box;
+  padding: 28px 0;
+  align-items: center;
+  background-color: #0E384C;
+  font-family: $default_font;
+  border-bottom: 1px solid #0E384C1A;
+  position: relative;
+  z-index: 100;
+  .left_service{
+    height: 100%;  
+    @include Flexible(center, center, row, wrap, 20px);
+    border-right: 1px solid #4b565b;
+    .left_part{
+     i{
+      color: white;
+      font-size: 50px;
+      line-height: 1.6em;
+     }
+    }
+    .right_part{
+      h1{
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: white;
+        margin-bottom: 10px;
+      }
+      h2{
+        color: white;
+        font-size: 16px;
+         font-weight: 400;
+        line-height: 1.6em;
+      }
+    }
+
+  }
+  .center_service{
+    height: 100%;  
+    @include Flexible(flex-start, center, row, wrap, 20px);
+    .left_part{
+     i{
+      color: white;
+      font-size: 50px;
+      line-height: 1.6em;
+     }
+    }
+    .right_part{
+      h1{
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: white;
+        margin-bottom: 10px;
+      }
+      h2{
+        color: white;
+        font-size: 16px;
+         font-weight: 400;
+        line-height: 1.6em;
+      }
+    }
+
+  }
+  .cont{
+    @include Flexible(flex-end, center, row, wrap, 10px);
+    width: 350px;
+    @media (max-width: 768px) {
+      width: 80%; 
+      @include Flexible(center, center, column, wrap, 10px); 
+    }
+    
+  
+    @media (max-width: 480px) {
+      width: 100%; 
+      @include Flexible(center, center, column, wrap, 5px); 
+    }
+   
+  
+    .btn_icon{
+      @include Flexible(center, center, row, wrap, 10px);
+      border: transparent;
+      padding: 13px 19px;
+      border-radius: 26px;
+      background: linear-gradient(to right, white 50%, transparent 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+      background-color: #1E84B5;
+      margin: 30px 0;
+    
+      &:hover {
+        background-position: left bottom;
+        color: #0E384C;
+       
+      }
+    
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-transform: capitalize;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-position: left bottom;
+          color: #0E384C;
+         
+        }
+
+        
+      }
+     
+    .icon{
+      @include Flexible(center, center, row, wrap, 0);
+      height: 27px;
+      width: 27px;
+      border: transparent;
+      border-radius: 100%;
+      background-color: white;
+      i{
+        color: #1E84B5;
+        
+      }
+    }
+    
+    }
+  
+   }
+}
