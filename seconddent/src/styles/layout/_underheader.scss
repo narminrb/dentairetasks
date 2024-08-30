@@ -1,0 +1,33 @@
+#underheader{
+  box-sizing: border-box;
+  padding: 140px 0;
+  align-items: center;
+  background-color: $background_color;
+  font-family: $default_font;
+  border-bottom: 1px solid #0E384C1A;
+  position: relative;
+  z-index: 100;
+  .teeth{
+    @include Flexible(center,center,row, wrap,10px);
+    margin-bottom: 20px;
+    h1{
+      color: #0E384C;
+      font-size: 54px;
+      font-weight: 700;
+      text-align: center;
+    }
+    h2{
+      color: #1E84B5;
+      font-size: 54px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  .undteeth{
+    @include Flexible(center,center,row, wrap,10px);
+    a{
+      text-decoration: none;
+      color: #0E384C;
+    }
+  }
+}

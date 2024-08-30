@@ -95,30 +95,62 @@
     margin-top: 60px;
   
     .first_card {
-      border: transparent;
-      transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+      position: relative;
       background-color: #FFFFFF;
       width: 403px;
       height: 266px;
-      position: relative;
       box-shadow: 0px 4px 40px 0px #0000000F;
       border-radius: 30px;
       margin-bottom: 30px;
-     transition: 0.5s ease-in-out;
       overflow: hidden;
+      transition: background-position 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
       z-index: 1;
+  }
   
-      img{
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        transition: 0.5s ease-in-out;
-        &:hover{
-          transform: scale(1.1);
-        }
+  .first_card img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+  }
+  
+  .first_card:hover img {
+      transform: scale(1.1); 
+  }
+  
+  .first_card::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.5); 
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+  }
+  
+  .first_card:hover::after {
+      animation: subtleShine 2.5s forwards;
+  }
+  
+  @keyframes subtleShine {
+      0% {
+          width: 0;
+          opacity: 0.3; 
       }
-    }
+      50% {
+          width: 250%;
+          opacity: 0.3; 
+      }
+      100% {
+          width: 250%;
+          opacity: 0; 
+      }
+  }
+  
     .icons-box {
       @include Flexible(center, center,row, wrap, 12px);
       position: absolute;
